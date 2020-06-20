@@ -15,7 +15,7 @@ struct DailyWeatherView: View {
         VStack {
             HStack {
                 Text("5-Day Forecast")
-                    .color(.gray)
+                    .foregroundColor(.gray)
                 
                 Spacer()
                 }.padding(.leading)
@@ -23,13 +23,13 @@ struct DailyWeatherView: View {
             Divider()
                 .padding([.leading, .trailing])
             
-            ForEach(data.data.identified(by: \.day)) { data in
+            ForEach(data.data, id: \.day) { data in
                 ZStack {
                     HStack {
                         Text(data.day)
                         Spacer()
                         Text(data.temperatureHigh).padding(8)
-                        Text(data.temperatureLow).color(.gray)
+                        Text(data.temperatureLow).foregroundColor(.gray)
                         }.padding([.leading, .trailing])
                     
                     Image(data.icon)

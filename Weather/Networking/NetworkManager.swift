@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-class NetworkManager: BindableObject {
+class NetworkManager: ObservableObject {
     var didChange = PassthroughSubject<NetworkManager, Never>()
     
     var currentWeather = CurrentWeatherViewModel() {
