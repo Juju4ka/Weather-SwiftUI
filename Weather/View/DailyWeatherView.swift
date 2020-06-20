@@ -41,3 +41,9 @@ struct DailyWeatherView: View {
         }
     }
 }
+
+struct DailyWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        DailyWeatherView(data: DailyWeatherViewModel(model: DailyWeather()))
+    }
+}
