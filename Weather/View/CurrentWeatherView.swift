@@ -57,3 +57,10 @@ struct CurrentWeatherView: View {
         }
     }
 }
+
+struct CurrentWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        CurrentWeatherView(data: CurrentWeatherViewModel(model: CurrentWeather()))
+    }
+}
